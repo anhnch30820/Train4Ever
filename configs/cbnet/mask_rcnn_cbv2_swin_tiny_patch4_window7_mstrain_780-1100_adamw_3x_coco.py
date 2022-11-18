@@ -139,32 +139,14 @@ model = dict(
             max_per_img=100,
             mask_thr_binary=0.5)))
 
-load_from = '/permanent_tuyendt23/NeurIPS2022/anhnch2/UniverseNet/pretrains/mask_rcnn_cbv2_swin_tiny_patch4_window7_mstrain_480-800_adamw_3x_coco.pth'
+data_root = './'
+load_from = data_root + '/pretrains/mask_rcnn_cbv2_swin_tiny_patch4_window7_mstrain_480-800_adamw_3x_coco.pth'
 
-# optimizer = dict(
-#     type='AdamW',
-#     lr=0.0001,
-#     betas=(0.9, 0.999),
-#     weight_decay=0.05,
-#     paramwise_cfg=dict(
-#         custom_keys=dict(
-#             absolute_pos_embed=dict(decay_mult=0.0),
-#             relative_position_bias_table=dict(decay_mult=0.0),
-#             norm=dict(decay_mult=0.0))))
-# lr_config = dict(
-#     policy='step',
-#     warmup='linear',
-#     warmup_iters=500,
-#     warmup_ratio=0.001,
-#     step=[43, 46])
-# runner = dict(type='EpochBasedRunner', max_epochs=50)
 checkpoint_config = dict(interval=2)
 log_config = dict(interval=50, hooks=[dict(type='TextLoggerHook')])
 
-
-
 dataset_type = 'CocoDataset'
-data_root = 'data/coco/'
+
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 train_pipeline = [
@@ -240,18 +222,18 @@ data = dict(
     workers_per_gpu=2,
     train=dict(
         type='CocoDataset',
-        ann_file= '/permanent_tuyendt23/NeurIPS2022/data/coco_annotations/val_annotations_fold0.json',
-        img_prefix= '/permanent_tuyendt23/NeurIPS2022/data/ImagesPNG',
+        ann_file= data_root + '/data_train/coco_annotations/val_annotations_fold0.json',
+        img_prefix= data_root + '/data_train/ImagesPNG',
         pipeline=train_pipeline),
     val=dict(
         type='CocoDataset',
-        ann_file= '/permanent_tuyendt23/NeurIPS2022/data/coco_annotations/val_annotations_fold0.json',
-        img_prefix='/permanent_tuyendt23/NeurIPS2022/data/ImagesPNG',
+        ann_file= data_root + '/data_train/coco_annotations/val_annotations_fold0.json',
+        img_prefix= data_root + '/data_train/ImagesPNG',
         pipeline=test_pipeline),
     test=dict(
         type='CocoDataset',
-        ann_file= '/permanent_tuyendt23/NeurIPS2022/data/coco_annotations/val_annotations_fold0.json',
-        img_prefix='/permanent_tuyendt23/NeurIPS2022/data/ImagesPNG',
+        ann_file= data_root + '/data_train/coco_annotations/val_annotations_fold0.json',
+        img_prefix= data_root + '/data_train/ImagesPNG',
         pipeline=test_pipeline))
 
 
