@@ -7,7 +7,7 @@ auto_scale_lr = dict(enable=False, base_batch_size=8)
 evaluation = dict(metric=['bbox', 'segm'], interval = 2)
 
 
-# workflow = [('train', 1)]
+workflow = [('train', 1)]
 # auto_scale_lr = dict(enable=False, base_batch_size=16)
 
 work_dir = './work_dirs/mask_rcnn_cbv2_swin_tiny_patch4_window7_mstrain_780-1100_adamw_3x_coco'
@@ -139,9 +139,7 @@ model = dict(
             max_per_img=100,
             mask_thr_binary=0.5)))
 
-data_root = './data'
-
-load_from = data_root + '/pretrains/mask_rcnn_cbv2_swin_tiny_patch4_window7_mstrain_480-800_adamw_3x_coco.pth'
+load_from = '/permanent_tuyendt23/NeurIPS2022/anhnch2/UniverseNet/pretrains/mask_rcnn_cbv2_swin_tiny_patch4_window7_mstrain_480-800_adamw_3x_coco.pth'
 
 # optimizer = dict(
 #     type='AdamW',
@@ -166,7 +164,7 @@ log_config = dict(interval=50, hooks=[dict(type='TextLoggerHook')])
 
 
 dataset_type = 'CocoDataset'
-
+data_root = 'data/coco/'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 train_pipeline = [
@@ -242,18 +240,18 @@ data = dict(
     workers_per_gpu=2,
     train=dict(
         type='CocoDataset',
-        ann_file= data_root + '/coco_annotations/val_annotations_fold0.json',
-        img_prefix= data_root + '/TrainImagesPNG',
+        ann_file= '/permanent_tuyendt23/NeurIPS2022/data/coco_annotations/val_annotations_fold0.json',
+        img_prefix= '/permanent_tuyendt23/NeurIPS2022/data/TrainImagesPNG',
         pipeline=train_pipeline),
     val=dict(
         type='CocoDataset',
-        ann_file= data_root + '/coco_annotations/val_annotations_fold0.json',
-        img_prefix= data_root + '/TrainImagesPNG',
+        ann_file= '/permanent_tuyendt23/NeurIPS2022/data/coco_annotations/val_annotations_fold0.json',
+        img_prefix='/permanent_tuyendt23/NeurIPS2022/data/TrainImagesPNG',
         pipeline=test_pipeline),
     test=dict(
         type='CocoDataset',
-        ann_file= data_root + '/coco_annotations/val_annotations_fold0.json',
-        img_prefix= data_root + '/TrainImagesPNG',
+        ann_file= '/permanent_tuyendt23/NeurIPS2022/data/coco_annotations/val_annotations_fold0.json',
+        img_prefix='/permanent_tuyendt23/NeurIPS2022/data/TrainImagesPNG',
         pipeline=test_pipeline))
 
 
