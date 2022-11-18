@@ -139,7 +139,7 @@ model = dict(
             max_per_img=100,
             mask_thr_binary=0.5)))
 
-data_root = './'
+data_root = '.'
 load_from = data_root + '/pretrains/mask_rcnn_cbv2_swin_tiny_patch4_window7_mstrain_480-800_adamw_3x_coco.pth'
 
 checkpoint_config = dict(interval=2)
