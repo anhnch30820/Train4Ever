@@ -50,7 +50,7 @@ def coco_structure(train_df, label_folder='TrainLabels', start_image_id=0, start
 
         img_name = row.img_name
         cell_id = img_name.split('.')[0]
-        label_path = f'{label_folder}/{cell_id}_label.tiff'
+        label_path = f'{label_folder}/{cell_id}.tiff'
         # img = read_image(img_path)
         label = read_image(label_path)
         instance_ids = np.unique(label)
@@ -111,7 +111,7 @@ def main(args):
     for img_name in tqdm(os.listdir(args.input_labels_path)):
         cell_id = img_name.split('.')[0]
         # img_path = f'TrainImagesPNG/{img_name}'
-        label_path = f'{args.input_labels_path}/{cell_id}_label.tiff'
+        label_path = f'{args.input_labels_path}/{cell_id}.tiff'
 
         label = read_image(label_path)
         h, w = label.shape[:2]
@@ -140,10 +140,10 @@ def main(args):
     train_annotations = coco_structure(train_df, label_folder=args.input_labels_path)
     val_annotations = coco_structure(val_df, label_folder=args.input_labels_path)
 
-    with open(f'{args.output_folder_path}/train_annotations_fold{chosen_fold}.json', 'w') as f:
+    with open(f'{args.output_path}/coco_annotations/train_annotations_fold{chosen_fold}.json', 'w') as f:
         json.dump(train_annotations, f)
 
-    with open(f'{args.output_folder_path}/val_annotations_fold{chosen_fold}.json', 'w') as f:
+    with open(f'{args.output_path}/coco_annotations/val_annotations_fold{chosen_fold}.json', 'w') as f:
         json.dump(val_annotations, f)
 
 if __name__ == "__main__":
