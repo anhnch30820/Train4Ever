@@ -65,7 +65,7 @@ def main(args):
     for img_name in tqdm(os.listdir(args.input_path)):
         cell_id = img_name.split('.')[0]
         
-        img_path = f'{args.input_path}{img_name}'
+        img_path = f'{args.input_path}/{img_name}'
         print(img_path)
         img_data = read_image(img_path)
         img = process_image(img_data)
