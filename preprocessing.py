@@ -83,23 +83,3 @@ if __name__ == "__main__":
 
 
 
-
-
-# train_img_names = []
-# train_widths = []
-# train_heights = []
-# train_num_cells = []
-
-# for img_name in tqdm(os.listdir('TrainImagesPNG')):
-#     cell_id = img_name.split('.')[0]
-#     img_path = f'TrainImagesPNG/{img_name}'
-#     label_path = f'TrainLabels/{cell_id}_label.tiff'
-
-#     label = read_image(label_path)
-#     h, w = label.shape[:2]
-#     train_widths.append(w)
-#     train_heights.append(h)
-#     train_num_cells.append(np.max(label))
-#     train_img_names.append(img_name)
-
-
