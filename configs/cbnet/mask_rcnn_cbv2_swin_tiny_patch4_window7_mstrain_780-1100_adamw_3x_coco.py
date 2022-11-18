@@ -241,17 +241,17 @@ data = dict(
     train=dict(
         type='CocoDataset',
         ann_file= '/permanent_tuyendt23/NeurIPS2022/data/coco_annotations/val_annotations_fold0.json',
-        img_prefix= '/permanent_tuyendt23/NeurIPS2022/data/TrainImagesPNG',
+        img_prefix= '/permanent_tuyendt23/NeurIPS2022/data/ImagesPNG',
         pipeline=train_pipeline),
     val=dict(
         type='CocoDataset',
         ann_file= '/permanent_tuyendt23/NeurIPS2022/data/coco_annotations/val_annotations_fold0.json',
-        img_prefix='/permanent_tuyendt23/NeurIPS2022/data/TrainImagesPNG',
+        img_prefix='/permanent_tuyendt23/NeurIPS2022/data/ImagesPNG',
         pipeline=test_pipeline),
     test=dict(
         type='CocoDataset',
         ann_file= '/permanent_tuyendt23/NeurIPS2022/data/coco_annotations/val_annotations_fold0.json',
-        img_prefix='/permanent_tuyendt23/NeurIPS2022/data/TrainImagesPNG',
+        img_prefix='/permanent_tuyendt23/NeurIPS2022/data/ImagesPNG',
         pipeline=test_pipeline))
 
 
