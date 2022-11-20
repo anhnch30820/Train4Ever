@@ -222,18 +222,18 @@ data = dict(
     workers_per_gpu=2,
     train=dict(
         type='CocoDataset',
-        ann_file= data_root + '/data_train/coco_annotations/val_annotations_fold0.json',
-        img_prefix= data_root + '/data_train/ImagesPNG',
+        ann_file= data_root + '/data/coco_annotations/val_annotations_fold0.json',
+        img_prefix= data_root + '/data/TrainImagesPNG',
         pipeline=train_pipeline),
     val=dict(
         type='CocoDataset',
-        ann_file= data_root + '/data_train/coco_annotations/val_annotations_fold0.json',
-        img_prefix= data_root + '/data_train/ImagesPNG',
+        ann_file= data_root + '/data/coco_annotations/val_annotations_fold0.json',
+        img_prefix= data_root + '/data/TrainImagesPNG',
         pipeline=test_pipeline),
     test=dict(
         type='CocoDataset',
-        ann_file= data_root + '/data_train/coco_annotations/val_annotations_fold0.json',
-        img_prefix= data_root + '/data_train/ImagesPNG',
+        ann_file= data_root + '/data/coco_annotations/val_annotations_fold0.json',
+        img_prefix= data_root + '/data/TrainImagesPNG',
         pipeline=test_pipeline))
 
 
