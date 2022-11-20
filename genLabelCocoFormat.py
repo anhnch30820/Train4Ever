@@ -140,10 +140,10 @@ def main(args):
     train_annotations = coco_structure(train_df, label_folder=args.input_labels_path)
     val_annotations = coco_structure(val_df, label_folder=args.input_labels_path)
 
-    with open(f'{args.output_path}/coco_annotations/train_annotations_fold{chosen_fold}.json', 'w') as f:
+    with open(f'{args.output_folder_path}/coco_annotations/train_annotations_fold{chosen_fold}.json', 'w') as f:
         json.dump(train_annotations, f)
 
-    with open(f'{args.output_path}/coco_annotations/val_annotations_fold{chosen_fold}.json', 'w') as f:
+    with open(f'{args.output_folder_path}/coco_annotations/val_annotations_fold{chosen_fold}.json', 'w') as f:
         json.dump(val_annotations, f)
 
 if __name__ == "__main__":

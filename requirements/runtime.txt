@@ -3,4 +3,3 @@ numpy
 pycocotools
 six
 terminaltables
-imagecodecs==2021.11.20
