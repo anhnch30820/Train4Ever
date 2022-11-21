@@ -40,7 +40,7 @@ Pretrain model CBNetV2 on dataset COCO [here](https://drive.google.com/drive/fol
 
 After the download is complete you set up folder as picture below
 
-![]()
+![setup folder](https://github.com/anhnch30820/Train4Ever/blob/master/setupfolder.png)
 
 
 # Training
