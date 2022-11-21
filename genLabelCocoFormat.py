@@ -50,7 +50,8 @@ def coco_structure(train_df, label_folder='TrainLabels', start_image_id=0, start
 
         img_name = row.img_name
         cell_id = img_name.split('.')[0]
-        label_path = f'{label_folder}/{cell_id}.tiff'
+
+        label_path = f'{label_folder}/{cell_id}_label.tiff'
         # img = read_image(img_path)
         label = read_image(label_path)
         instance_ids = np.unique(label)
@@ -118,7 +119,7 @@ def main(args):
         train_widths.append(w)
         train_heights.append(h)
         train_num_cells.append(np.max(label))
-        train_img_names.append(img_name)
+        train_img_names.append(cell_id[:-6]+'.png')
 
     train_val_meta = pd.DataFrame({'img_name':train_img_names,
                 'width':train_widths,
