@@ -52,5 +52,6 @@ You can change file config [here](https://github.com/anhnch30820/Train4Ever/blob
 
 # Inference
 
-
-
+```
+python inference.py --input_path <path_to_input_data> --ckpt_path <path_to_input_ckpt> --config_path <path_to_input_config> --output_path <path_to_output>
+```

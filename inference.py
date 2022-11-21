@@ -127,7 +127,7 @@ def main(args):
             print('Image', fname, 'has predicted inst num =', len(outputs[1][0]), 
                 'And size =', shortest_edge,
                 '. Use sliding window infer with patch size:', patch_size)
-            pred_instance_mask, result = sliding_window_prediction(im, model, patch_size)
+            pred_instance_mask = sliding_window_prediction(im, model, patch_size)
             # np.savetxt(os.path.join(TUNING_SET_OUT_FOLDER, fname.split('.')[0] +'_label.txt'), result)
         else:
             pred_instance_mask = np.zeros((im.shape[0], im.shape[1]), dtype=np.int32)
