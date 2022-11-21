@@ -50,3 +50,7 @@ tools/dist_train.sh configs/cbnet/mask_rcnn_cbv2_swin_tiny_patch4_window7_mstrai
 
 You can change file config [here](https://github.com/anhnch30820/Train4Ever/blob/master/configs/cbnet/mask_rcnn_cbv2_swin_tiny_patch4_window7_mstrain_780-1100_adamw_3x_coco.py) 
 
+# Inference
+
+
+
