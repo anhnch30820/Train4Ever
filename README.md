@@ -52,6 +52,7 @@ You can change file config [here](https://github.com/anhnch30820/Train4Ever/blob
 
 # Inference
 
+checkpoint our model [here](https://drive.google.com/drive/folders/1cFBQSOXAtmpCAKeCePIpeReR884EUbOx?usp=sharing)
 ```
 python inference.py --input_path <path_to_input_data> --config_path <path_to_input_config> --ckpt_path <path_to_input_ckpt> --output_path <path_to_output>
 ```
