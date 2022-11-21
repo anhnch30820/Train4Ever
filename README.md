@@ -22,7 +22,7 @@ chmod 777 ./tools/dist_train.sh
 
 # Preprocessing and Gen label format COCO
 
-## Preprocessing
+## Preprocessing images to PNG
 ```
 python preprocessing.py --input_path <path_to_input_data> --output_path ./data/TrainImagesPNG
 ```
@@ -36,9 +36,9 @@ python genLabelCocoFormat.py --input_labels_path <path_to_input_label_images> --
 
 To save time you can download our preprocessed data and generated annotation file [here](https://drive.google.com/drive/folders/1vXAGZr7MMzyY-gDTfFR0ECH38BeKD1d_?usp=sharing)
 
-Pretrain model CBNetV2 on dataset COCO [here](https://drive.google.com/drive/folders/1MZRwGBnHPyLUeyazakVG-WHaZfcPsGuD?usp=sharing)
+Pretrain model CBNetV2 on dataset COCO [here](https://drive.google.com/drive/folders/1MZRwGBnHPyLUeyazakVG-WHaZfcPsGuD?usp=sharing), **put file weight pretrain at folder pretrains**
 
-After the download is complete you set up folder as picture below
+After the download is complete you set up folder as picture below and put the corresponding dataset
 
 ![setup folder](https://github.com/anhnch30820/Train4Ever/blob/master/setupfolder.png)
 
