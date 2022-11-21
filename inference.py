@@ -117,7 +117,6 @@ def main(args):
         
         # # convert to RGB
         im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
-        h, w = im.shape[:2]
         shortest_edge = np.min(im.shape[:2])
         outputs = inference_detector(model, im)
         

@@ -53,5 +53,7 @@ You can change file config [here](https://github.com/anhnch30820/Train4Ever/blob
 # Inference
 
 ```
-python inference.py --input_path <path_to_input_data> --ckpt_path <path_to_input_ckpt> --config_path <path_to_input_config> --output_path <path_to_output>
+python inference.py --input_path <path_to_input_data> --config_path <path_to_input_config> --ckpt_path <path_to_input_ckpt> --output_path <path_to_output>
 ```
+
+Our model based on CBNetV2 of [UniverseNet](https://github.com/shinya7y/UniverseNet)
