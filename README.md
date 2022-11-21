@@ -31,8 +31,8 @@ python preprocessing.py --input_path <path_to_input_data> --output_path ./data/T
 ```
 python genLabelCocoFormat.py --input_labels_path <path_to_input_label_images> --output_folder_path ./data
 ```
-# Prepare training
-**Our preprocessed data, generated annotation file and pretrain model CBNetV2 on dataset COCO**
+
+# Our preprocessed data, generated annotation file and pretrain model CBNetV2 on dataset COCO
 
 To save time you can download our preprocessed data and generated annotation file [here](https://drive.google.com/drive/folders/1vXAGZr7MMzyY-gDTfFR0ECH38BeKD1d_?usp=sharing)
 
